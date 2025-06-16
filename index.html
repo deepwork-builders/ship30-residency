@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship30 AI Residency ⚡</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro/Cera Pro Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro/Cera Pro Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000;
+            /* Dark background */
+            color: #ffffff;
+            /* White text */
+            font-family: 'Cera Pro', sans-serif;
+            padding-top: 60px;
+            /* Add padding to body to prevent content from being hidden by fixed header */
+        }
+
+        /* Global font family application */
+        * {
+            font-family: 'Cera Pro', sans-serif;
+        }
+
+        /* Specific styles for navigation */
+        nav ul li a {
+            font-family: 'Cera Pro', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Header text */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Semi-transparent dark background */
+            padding: 1rem 3rem;
+            font-family: 'Cera Pro', sans-serif;
+        }
+
+        /* Button text */
+        button {
+            font-family: 'Cera Pro', sans-serif;
+        }
+
+        /* Table text */
+        table {
+            font-family: 'Cera Pro', sans-serif;
+        }
+
+        /* Headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cera Pro', sans-serif;
+        }
+
+        .grid-background {
+            background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, #141414 1px);
+            background-size: 50px 50px;
+            /* Adjust grid size */
+        }
+
+        .scrolling-content-background {
+            -webkit-backdrop-filter: blur(45px);
+            backdrop-filter: blur(45px);
+            background-image: linear-gradient(140deg, #363636bf, #070707bf);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            /* Ensure table text is white */
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        th {
+            font-weight: bold;
+            color: #ccc;
+        }
+
+        /* Hide the hand image placeholder on larger screens */
+        .hand-placeholder-lg-hidden {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .hand-placeholder-lg-hidden {
+                display: none;
+            }
+        }
+
+        .hero-title {
+            /* Adjust size as needed */
+            font-size: 5em;
+        }
+
+
+        .hero-container {
+            width: 100%;
+            height: calc(100svh - 140px);
+            margin-bottom: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 6%;
+            padding-right: 0;
+            position: relative;
+            border-radius: 18px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <!-- Header Menu -->
+    <header class="fixed-header">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Placeholder -->
+            <div class="text-xl font-bold">Ship30 AI Residency</div>
+            <!-- Navigation Links (Placeholders) -->
+            <nav>
+                <ul class="flex space-x-4 text-sm">
+                    <li><a href="#tldr" class="hover:underline">OVERVIEW</a></li>
+                    <li><a href="#program" class="hover:underline">SCHEDULE</a></li>
+                    <li><a href="#pricing" class="hover:underline">PRICING</a></li>
+                    <li><a href="#contact" class="hover:underline">APPLY</a></li>
+                    <li><a href="#contact" class="hover:underline">INFO SESSION</a></li>
+                </ul>
+            </nav>
+            <!-- Language Switcher -->
+            <!-- Removed EN - PT Language Switcher -->
+            <a href="#contact" class="ml-4"><button
+                    class="bg-white text-black font-bold py-1 px-4 rounded-lg text-sm hover:bg-gray-200">APPLY
+                    NOW</button></a>
+        </div>
+    </header>
+
+    <div class="mx-auto">
+
+        <!-- Hero Section (similar to the first section of CloudWalk with main title and image) -->
+        <!-- Removed original hero section -->
+
+        <!-- Fixed Hero Background and Content -->
+        <section class="fixed inset-0 w-screen h-screen flex items-center justify-center z-0 ">
+            <div class="flex h-full items-center p-8 grid-background hero-container">
+                <div class="w-1/2 flex items-center justify-start">
+                    <div class="hero-text-container absolute bottom-10">
+                        <p class="text-lg mb-2 text-white">run by deepwork builders</p>
+                        <h1 class="hero-title font-thin leading-none text-white text-4xl uppercase">Ship30 AI<br>Residency
+                        </h1>
+                    </div>
+                </div>
+                <div class="w-1/2 flex items-center justify-center">
+                    <!-- <img class="residency_hero-image" src="images/residency_hero-head.webp"
+                        alt="Themed anatomical and mechanical head" style="max-height: 75vh; width: auto;"> -->
+                </div>
+    
+            </div>
+            <img class="residency_hero-image" src="images/residency_hero-head.webp"
+            alt="Themed anatomical and mechanical head" style="position: absolute; margin: auto; bottom: 0px; right: 0px; left: 0px; max-height: 75vh; width: auto;">
+        </section>
+
+        <!-- Wrapper for the rest of the content to scroll over the fixed hero -->
+        <div class="relative z-10" style="padding-top: 100vh;">
+
+            <!-- Section 2 (TL;DR - placed after Hero) -->
+            <section id="tldr" class="flex items-center justify-center min-h-screen pt-16 scrolling-content-background">
+                <div class="container mx-auto flex flex-col md:flex-row items-center">
+                    <!-- Left Column: Image Placeholder (e.g., Hand) -->
+                    <div class="md:w-1/2 mb-8 md:mb-0 hidden md:block">
+                        <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
+                            <img class="residency_hero-image" src="images/heart-cyber.webp"
+                            alt="Themed anatomical and mechanical head" style="max-height: 75vh; width: auto;">
+                        </div>
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="md:w-1/2 md:pl-12 text-lg">
+                        <h2 class="text-2xl font-bold mb-4">About the Residency</h2>
+                        <p>Ship30 AI Residency is a 30-day, outcome-driven program for solo founders, indie hackers, and early-stage AI builders who want to break through noise and ship real products. Hosted in carefully selected, distraction-free locations, the residency blends structured deep work, peer accountability, expert mentorship, and local exploration. No equity, no fluff—just one intense month to build, launch, and grow something meaningful.</p>
+                        <!-- Placeholder for image on smaller screens -->
+                        <div class="md:hidden bg-gray-700 w-full h-96 flex items-center justify-center mt-8">
+                            <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
+                        </div>
+                    </div>
+                    <!-- Right Column: Image Placeholder (e.g., Hand) - visible on larger screens -->
+                    <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 md:hidden">
+                        <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
+                            <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 (Why Join? and image) -->
+            <section class="flex items-center justify-center min-h-screen pt-16 scrolling-content-background">
+                <div class="container mx-auto flex flex-col md:flex-row items-center">
+                    <!-- Left Column: Why Join? Content -->
+                    <div class="md:w-1/2 mb-8 md:mb-0 text-lg">
+                        <h2 class="text-2xl font-bold mb-4">Why Join?</h2>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Monk‑Mode Focus 🔕 – 6 hours/day of enforced deep‑work sprints; phones in a lock‑box
+                            </li>
+                            <li>Outcome Guarantee 🎯 – hit ≥ 90 % of your stated goal & earn your bond back (+10 %
+                                tuition rebate)</li>
+                            <li>AI‑Only Community 🤖 – everyone is shipping LLM, GenAI or ML‑powered products—no
+                                irrelevant chatter</li>
+                            <li>Mentor Office Hours 📡 – live Zoom firesides + on‑site weekends with AI founders &
+                                investors</li>
+                            <li>Weekend Explorer 🌄 – local excursion (backwater cruise, beach trek or waterfall hike)
+                                on Saturdays earned by meeting weekly deliverables</li>
+                        </ul>
+                    </div>
+                    <!-- Right Column: Image Placeholder (e.g., Eye) -->
+                    <div class="md:w-1/2 md:pl-12">
+                        <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
+                            <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 (Program Snapshot, Daily Rhythm, Weekends and image) -->
+            <section id="program"
+                class="flex items-center justify-center min-h-screen pt-16 scrolling-content-background">
+                <div class="container mx-auto flex flex-col md:flex-row items-center">
+                    <!-- Left Column: Tables and Lists -->
+                    <div class="md:w-1/2 mb-8 md:mb-0 text-lg">
+                        <h2 class="text-2xl font-bold mb-4">Program Snapshot</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td>30 days on‑site (arrive Sunday, depart following Sunday AM)</td>
+                                </tr>
+                                <tr>
+                                    <td>Cohort Size</td>
+                                    <td>10 founders max (4 private, 6 shared)</td>
+                                </tr>
+                                <tr>
+                                    <td>Structure</td>
+                                    <td>Daily stand‑up → two 3‑hour Deep‑Work blocks → mentor / peer review sessions
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Deliverables</td>
+                                    <td>Week 1 spec ✓ / Week 2 MVP backend ✓ / Week 3 E2E test ✓ / Week 4 Launch to ≥ 10
+                                        users ✓</td>
+                                </tr>
+                                <tr>
+                                    <td>Milestone Bond</td>
+                                    <td>₹5 k refundable on completion (> 70 %)</td>
+                                </tr>
+                                <tr>
+                                    <td>Outcome</td>
+                                    <td>Public Demo Day streamed on LinkedIn Live 🎥</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">Daily Rhythm (Mon – Fri)</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time (IST)</th>
+                                    <th>Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08 : 30</td>
+                                    <td>Sunrise yoga / nature walk (optional)</td>
+                                </tr>
+                                <tr>
+                                    <td>09 : 30</td>
+                                    <td>10‑min stand‑up (strict timer)</td>
+                                </tr>
+                                <tr>
+                                    <td>10 : 00 – 13 : 00</td>
+                                    <td>Deep‑Work Sprint ① – phones locked, Pomodoro chime every 50 min</td>
+                                </tr>
+                                <tr>
+                                    <td>13 : 00 – 14 : 00</td>
+                                    <td>Regional home‑style lunch (veg & non‑veg)</td>
+                                </tr>
+                                <tr>
+                                    <td>14 : 00 – 17 : 00</td>
+                                    <td>Deep‑Work Sprint ②</td>
+                                </tr>
+                                <tr>
+                                    <td>17 : 00 – 18 : 30</td>
+                                    <td>Mentor office hour / peer code & pitch reviews</td>
+                                </tr>
+                                <tr>
+                                    <td>18 : 30 – 19 : 30</td>
+                                    <td>Dinner</td>
+                                </tr>
+                                <tr>
+                                    <td>20 : 00 – 22 : 00</td>
+                                    <td>Night‑Owl room open (optional)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="text-xl font-bold mb-4 mt-8">Weekends</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Saturday AM: Deliverable review & retro</li>
+                            <li>Saturday PM: Local excursion (location‑specific) (earned)</li>
+                            <li>Sunday: Open kitchen; residents may cook, explore, or rest</li>
+                        </ul>
+                    </div>
+                    <!-- Right Column: Image Placeholder (e.g., Lungs) -->
+                    <div class="md:w-1/2 md:pl-12">
+                        <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
+                            <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5 (What's Included and Add-Ons) -->
+            <section id="pricing" class="pt-16 scrolling-content-background">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4">What's Included</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Accommodation</td>
+                                <td>AC bedroom (shared / private) with desk & ergonomic chair</td>
+                            </tr>
+                            <tr>
+                                <td>Workspace</td>
+                                <td>Dedicated desk, fast Wi‑Fi (dual 300 Mbps fibre + 4G backup + UPS)</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>3 buffet meals/day (veg & non‑veg); unlimited chai/coffee; extra rotis on request
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Utilities</td>
+                                <td>Laundry twice/week; housekeeping alt‑day; power‑backup inverter</td>
+                            </tr>
+                            <tr>
+                                <td>Amenities</td>
+                                <td>Whiteboards, projector, garden stand‑up area, hammock corner</td>
+                            </tr>
+                            <tr>
+                                <td>Community</td>
+                                <td>Discord server, alumni channel, optional "FastBack Pass" (₹5 k for future 5‑day
+                                    stays)</td>
+                            </tr>
+                            <tr>
+                                <td>Perks</td>
+                                <td>Credits: $200 in Groq API, $500 in Replicate credits, Framer Pro 1‑mo voucher</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="text-2xl font-bold mb-4 mt-8">Add‑Ons 💡</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GPU Residency 🔋</td>
+                                <td>On‑site RTX 4090 tower: ₹12 k flat/month or ₹400/hr pay‑as‑you‑go</td>
+                            </tr>
+                            <tr>
+                                <td>Micro‑Team Sprint (5‑10 days)</td>
+                                <td>Bring your 3‑6‑person startup, ₹1.1 L package all‑in</td>
+                            </tr>
+                            <tr>
+                                <td>Investor‑in‑Residence Week</td>
+                                <td>VC partner on‑site; office hours for residents & alumni</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 6 (Milestone Bond & Refund Matrix and Application Process) -->
+            <section class="mb-12 pt-16 scrolling-content-background">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4">Milestone Bond & Refund Matrix</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Goal Completion</th>
+                                <th>Bond Return</th>
+                                <th>Tuition Rebate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>≥ 90 %</td>
+                                <td>100 %</td>
+                                <td>+10 % cash‑back</td>
+                            </tr>
+                            <tr>
+                                <td>70 – 89 %</td>
+                                <td>50 %</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    < 70 %< /td>
+                                <td>0 % (donated to a local STEM charity)</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 7 (FAQs) -->
+            <section id="faqs" class="mb-12 pt-16 scrolling-content-background">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4">FAQs</h2>
+                    <div class="space-y-4 text-lg">
+                        <div>
+                            <h3 class="font-bold">Is this only for solo founders?</h3>
+                            <p>Primary program is solo / duo, but we run Micro‑Team Sprints; inquire for dates.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Do you take equity?</h3>
+                            <p>No. We're a pay‑and‑ship residency; your cap table stays clean.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Food preferences?</h3>
+                            <p>Veg & non‑veg counters; Jain meals available on request.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Internet reliability?</h3>
+                            <p>Dual 300 Mbps fibre lines, automatic 4G fail‑over, 4‑h UPS; uptime ≥ 99.5 %.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Can I arrive late or leave early?</h3>
+                            <p>We discourage it—cadence matters. Early departures forfeit bond.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Refund if I cancel?</h3>
+                            <p>75 % refund ≥ 30 days before start; 25 % ≥ 14 days; bond non‑refundable < 14 days.< /p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8 (Contact & Next Steps and Call to Action) -->
+            <section id="contact" class="mb-12 pt-16 scrolling-content-background">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-4">Contact & Next Steps</h2>
+                    <div class="space-y-2 text-lg mb-8">
+                        <p>🌐 Website: <a href="https://deepwork-builders.github.io/ship30-residency/"
+                                class="text-blue-400 hover:underline">https://deepwork-builders.github.io/ship30-residency/</a>
+                        </p>
+                        <p>✉️ Email: <a href="mailto:apply@deepworkbuilders.com"
+                                class="text-blue-400 hover:underline">apply@deepworkbuilders.com</a></p>
+                        <p>📞 WhatsApp: +91 8097415085</p>
+                        <p>🗓️ Info Session (Zoom): Every Wednesday 20 : 00 IST – <a href="#"
+                                class="text-blue-400 hover:underline">Register Here</a></p>
+                    </div>
+
+                    <div class="text-center mt-12">
+                        <p class="text-xl mb-6">"Escape the city, focus for 30 days, and ship something real."</p>
+                        <p class="text-xl font-bold mb-6">Ready? Apply Now</p>
+                        <button
+                            class="bg-white text-black font-bold py-3 px-8 rounded-lg text-xl hover:bg-gray-200">Apply
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer (Styled like CloudWalk) -->
+        <footer class="bg-black text-white p-8 mt-12 relative">
+            <!-- Large RESIDENCY text - positioned absolutely in the background -->
+            <div
+                class="absolute inset-0 flex items-center justify-center opacity-10 text-gray-700 font-bold text-8xl md:text-9xl pointer-events-none">
+                RESIDENCY
+            </div>
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
+                <!-- Logo and Copyright -->
+                <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+                    <!-- Placeholder for CloudWalk Logo -->
+                    <div class="text-2xl font-bold mb-2">cloudwalk</div>
+                    <p class="text-sm">&copy; 2025 CloudWalk, Inc. Copyright</p>
+                </div>
+
+                <!-- Products and Company Links -->
+                <div class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-16">
+                    <!-- Products -->
+                    <div>
+                        <h3 class="font-bold mb-2">Products</h3>
+                        <ul class="space-y-1 text-sm">
+                            <li>InfinitePay</li>
+                            <li>STRATUS</li>
+                            <li>JIM</li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h3 class="font-bold mb-2">Company</h3>
+                        <ul class="space-y-1 text-sm">
+                            <li>Newsroom</li>
+                            <li>Work with us</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Privacy Policy -->
+                <div class="mt-8 md:mt-0">
+                    <p class="text-sm">Privacy Policy</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
