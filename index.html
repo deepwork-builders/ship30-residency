@@ -7,6 +7,7 @@
     <title>Ship30 AI Residency ⚡</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Font declarations */
         @font-face {
             font-family: 'Cera Pro';
             src: url('fonts/CeraPro/Cera Pro Regular.otf') format('opentype');
@@ -49,49 +50,19 @@
             font-style: normal;
         }
 
-        @font-face {
-            font-family: 'Cera Pro';
-            src: url('fonts/CeraPro/Cera Pro ExtraBold.otf') format('opentype');
-            font-weight: 800;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Cera Pro';
-            src: url('fonts/CeraPro/Cera Pro Black Italic.otf') format('opentype');
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Cera Pro';
-            src: url('fonts/CeraPro/Cera Pro Bold Italic.otf') format('opentype');
-            font-weight: bold;
-            font-style: italic;
-        }
-
+        /* Global styles */
         body {
             background-color: #000;
-            /* Dark background */
             color: #ffffff;
-            /* White text */
             font-family: 'Cera Pro', sans-serif;
             padding-top: 60px;
-            /* Add padding to body to prevent content from being hidden by fixed header */
         }
 
-        /* Global font family application */
         * {
             font-family: 'Cera Pro', sans-serif;
         }
 
-        /* Specific styles for navigation */
-        nav ul li a {
-            font-family: 'Cera Pro', sans-serif;
-            font-weight: 500;
-        }
-
-        /* Header text */
+        /* Header styles */
         .fixed-header {
             position: fixed;
             top: 0;
@@ -99,35 +70,14 @@
             right: 0;
             z-index: 50;
             background-color: rgba(0, 0, 0, 0.8);
-            /* Semi-transparent dark background */
             padding: 1rem 3rem;
-            font-family: 'Cera Pro', sans-serif;
         }
 
-        /* Button text */
-        button {
-            font-family: 'Cera Pro', sans-serif;
-        }
-
-        /* Table text */
-        table {
-            font-family: 'Cera Pro', sans-serif;
-        }
-
-        /* Headings */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Cera Pro', sans-serif;
-        }
-
+        /* Background patterns */
         .grid-background {
-            background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, #141414 1px);
+            background-image: linear-gradient(to right, #333 1px, transparent 1px), 
+                              linear-gradient(to bottom, #333 1px, #141414 1px);
             background-size: 50px 50px;
-            /* Adjust grid size */
         }
 
         .scrolling-content-background {
@@ -136,16 +86,15 @@
             background-image: linear-gradient(140deg, #363636bf, #070707bf);
         }
 
+        /* Table styles */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 1rem;
             color: #ffffff;
-            /* Ensure table text is white */
         }
 
-        th,
-        td {
+        th, td {
             padding: 0.75rem;
             text-align: left;
             border-bottom: 1px solid #333;
@@ -156,7 +105,7 @@
             color: #ccc;
         }
 
-        /* Hide the hand image placeholder on larger screens */
+        /* Responsive utilities */
         .hand-placeholder-lg-hidden {
             display: block;
         }
@@ -167,58 +116,53 @@
             }
         }
 
+        /* Hero styles */
         .hero-title {
-            /* Adjust size as needed */
             font-size: 5em;
         }
-
 
         .hero-container {
             width: 100%;
             height: calc(100svh - 140px);
-            margin-bottom: 3%;
-            margin-left: 3%;
-            margin-right: 3%;
-            margin-top: 6%;
+            margin: 6% 3% 3% 3%;
             padding-right: 0;
             position: relative;
             border-radius: 18px;
             border: 1px solid #333;
         }
-    </style>
-    <style>
-        /* Soft off‑white accent replaces bright red */
+
+        /* Custom colors and effects */
         .text-primary {
-            color: #F5F5F5
+            color: #F5F5F5;
         }
 
-        /* Hover elevation for metric cards*/
+        /* Hover effects */
         #benefit-grid .group:hover,
         #snapshot-grid .group:hover {
             transform: translateY(-2px);
             transition: transform .15s ease;
         }
 
-        @media(prefers-reduced-motion:reduce) {
-
+        @media(prefers-reduced-motion: reduce) {
             #benefit-grid .group:hover,
             #snapshot-grid .group:hover {
                 transform: none;
             }
         }
-    </style>
-    </style>
 
+        /* Footer fade effect */
+        .residency-fade {
+            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+            mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+        }
+    </style>
 </head>
 
 <body class="font-sans">
-
     <!-- Header Menu -->
     <header class="fixed-header">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo Placeholder -->
             <div class="text-xl font-bold">Ship30 AI Residency</div>
-            <!-- Navigation Links (Placeholders) -->
             <nav>
                 <ul class="flex space-x-4 text-sm">
                     <li><a href="#tldr" class="hover:underline">OVERVIEW</a></li>
@@ -228,68 +172,60 @@
                     <li><a href="#contact" class="hover:underline">INFO SESSION</a></li>
                 </ul>
             </nav>
-            <!-- Language Switcher -->
-            <!-- Removed EN - PT Language Switcher -->
-            <a href="#contact" class="ml-4"><button
-                    class="bg-white text-black font-bold py-1 px-4 rounded-lg text-sm hover:bg-gray-200">APPLY
-                    NOW</button></a>
+            <a href="#contact" class="ml-4">
+                <button class="bg-white text-black font-bold py-1 px-4 rounded-lg text-sm hover:bg-gray-200">
+                    APPLY NOW
+                </button>
+            </a>
         </div>
     </header>
 
     <div class="mx-auto">
-
-        <!-- Hero Section (similar to the first section of CloudWalk with main title and image) -->
-        <!-- Removed original hero section -->
-
-        <!-- Fixed Hero Background and Content -->
-        <section class="fixed inset-0 w-screen h-screen flex items-center justify-center z-0 ">
+        <!-- Hero Section -->
+        <section class="fixed inset-0 w-screen h-screen flex items-center justify-center z-0">
             <div class="flex h-full items-center p-8 grid-background hero-container">
                 <div class="w-1/2 flex items-center justify-start">
                     <div class="hero-text-container absolute bottom-10">
                         <p class="text-lg mb-2 text-white">run by deepwork builders</p>
-                        <h1 class="hero-title font-thin leading-none text-white text-4xl uppercase">Ship30
-                            AI<br>Residency
+                        <h1 class="hero-title font-thin leading-none text-white text-4xl uppercase">
+                            Ship30<br>AI Residency
                         </h1>
                     </div>
                 </div>
                 <div class="w-1/2 flex items-center justify-center">
-                    <!-- <img class="residency_hero-image" src="images/residency_hero-head.webp"
-                        alt="Themed anatomical and mechanical head" style="max-height: 75vh; width: auto;"> -->
+                    <!-- Hero image placeholder -->
                 </div>
-
             </div>
-            <img class="residency_hero-image" src="images/residency_hero-head.webp"
-                alt="Themed anatomical and mechanical head"
-                style="position: absolute; margin: auto; bottom: 0px; right: 0px; left: 0px; max-height: 75vh; width: auto;">
+            <img class="residency_hero-image" 
+                 src="images/residency_hero-head.webp"
+                 alt="Themed anatomical and mechanical head"
+                 style="position: absolute; margin: auto; bottom: 0px; right: 0px; left: 0px; max-height: 75vh; width: auto;">
         </section>
 
-        <!-- Wrapper for the rest of the content to scroll over the fixed hero -->
+        <!-- Wrapper for scrollable content -->
         <div class="relative z-10" style="padding-top: 100vh;">
-
-            <!-- Section 2 (TL;DR - placed after Hero) -->
+            <!-- TL;DR Section -->
             <section id="tldr" class="flex items-center justify-center min-h-screen pt-16 scrolling-content-background">
                 <div class="container mx-auto flex flex-col md:flex-row items-center">
-                    <!-- Left Column: Image Placeholder (e.g., Hand) -->
                     <div class="md:w-1/2 mb-8 md:mb-0 hidden md:block">
                         <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
-                            <img class="residency_hero-image" src="images/heart-cyber.webp"
-                                alt="Themed anatomical and mechanical head" style="max-height: 75vh; width: auto;">
+                            <img class="residency_hero-image" 
+                                 src="images/heart-cyber.webp"
+                                 alt="Themed anatomical and mechanical head" 
+                                 style="max-height: 75vh; width: auto;">
                         </div>
                     </div>
-                    <!-- Right Column: Content -->
                     <div class="md:w-1/2 md:pl-12 text-lg">
                         <h2 class="text-2xl font-bold mb-4">About the Residency</h2>
                         <p>Ship30 AI Residency is a 30-day, outcome-driven program for solo founders, indie hackers, and
                             early-stage AI builders who want to break through noise and ship real products. Hosted in
                             carefully selected, distraction-free locations, the residency blends structured deep work,
-                            peer accountability, expert mentorship, and local exploration. No equity, no fluff—just one
+                            peer accountability, expert mentorship, and local exploration. No equity, no fluff, just one
                             intense month to build, launch, and grow something meaningful.</p>
-                        <!-- Placeholder for image on smaller screens -->
                         <div class="md:hidden bg-gray-700 w-full h-96 flex items-center justify-center mt-8">
                             <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
                         </div>
                     </div>
-                    <!-- Right Column: Image Placeholder (e.g., Hand) - visible on larger screens -->
                     <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 md:hidden">
                         <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
                             <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
@@ -298,575 +234,81 @@
                 </div>
             </section>
 
-            <!-- ───────────────────────────────────────────────────────────
-     Why‑Join & Program Snapshot Sections  —  Two‑column variant
-     · Left column: bold message text
-     · Right column: 2×2 grid of benefit cards + 5th full‑width card
-     · Subtle colours & compact CTA
-     Tailwind v2 compatible.
-─────────────────────────────────────────────────────────── -->
-
-            <!-- ███ 1. WHY JOIN?  ███ -->
+            <!-- Why Join Section -->
             <section id="why-join" class="py-24 scrolling-content-background">
                 <div class="container mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-24">
-
-                    <!-- Left: Hero statement text -->
                     <div class="flex items-center mb-16 md:mb-0">
                         <h2 class="text-4xl uppercase md:text-8xl font-thin leading-tight">
                             Cut through the noise.<br class="hidden md:block">Build AI that matters.
                         </h2>
                     </div>
 
-                    <!-- Right: Benefit cards grid -->
-                    <div>
+                    <div class="flex items-center">
                         <div class="grid gap-12 sm:grid-cols-2" id="benefit-grid">
-                            <!-- Card 1 -->
                             <div class="group" data-count="6">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
-                                    data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Hours of Deep Work</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Phones locked away, context‑switches
-                                    banned—solid focus blocks that compound daily.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Phones locked away, context‑switches banned, solid focus blocks that compound daily.</p>
                             </div>
-                            <!-- Card 2 -->
                             <div class="group" data-count="90">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
-                                    data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Success Threshold</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Hit ≥ 90 % of your milestone and get your bond
-                                    back + 10 % rebate.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Hit ≥ 90% of your milestone and get your bond back + 10% rebate.</p>
                             </div>
-                            <!-- Card 3 -->
                             <div class="group" data-count="100">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
-                                    data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Builders‑Only Network</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">100+ peers shipping GenAI, LLM & ML
-                                    products—zero off‑topic chatter.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">100% peers shipping GenAI, LLM & ML products zero off‑topic chatter.</p>
                             </div>
-                            <!-- Card 4 -->
                             <div class="group" data-count="24">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
-                                    data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Direct Mentor Line</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">24 / 7 Slack + live Q&As with exited AI
-                                    founders and active investors.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">24/7 Slack + live Q&As with exited AI founders and active investors.</p>
                             </div>
-                            <!-- Card 5 (full width) -->
                             <div class="group sm:col-span-2" data-count="5">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
-                                    data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Earned Saturday Adventures</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Meet weekly KPIs → kayak backwaters, trek
-                                    hidden beaches or chase local waterfalls.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Meet weekly KPIs → kayak backwaters, trek hidden beaches or chase local waterfalls.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <!-- ███ 2. PROGRAM SNAPSHOT  ███ -->
-            <section id="program-snapshot" class="py-24 grid-background border-t border-neutral-800/40">
-                <div class="container mx-auto max-w-5xl">
-
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-16">
-                        Program <span class="text-primary">Snapshot</span>
-                    </h2>
-
-                    <!-- Top Metrics -->
-                    <div class="grid gap-14 md:grid-cols-3 text-center" id="snapshot-grid">
-                        <div class="group" data-count="30">
-                            <span class="block font-mono text-5xl lg:text-6xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-lg font-medium mt-2">Days On‑Site</h3>
-                        </div>
-                        <div class="group" data-count="10">
-                            <span class="block font-mono text-5xl lg:text-6xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-lg font-medium mt-2">Founders / Cohort</h3>
-                        </div>
-                        <div class="group" data-count="2">
-                            <span class="block font-mono text-5xl lg:text-6xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-lg font-medium mt-2">Deep‑Work Sprints</h3>
-                        </div>
-                    </div>
-
-                    <!-- Key Details table -->
-                    <h3 class="text-2xl font-bold mt-20 mb-8">Key Details</h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full text-left text-neutral-300 text-sm">
-                            <tbody class="divide-y divide-neutral-700/60">
-                                <tr>
-                                    <td class="py-2 font-medium">Duration</td>
-                                    <td class="py-2">30 days on‑site (arrive Sunday, depart following Sunday AM)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 font-medium">Cohort Size</td>
-                                    <td class="py-2">10 founders max (4 private, 6 shared)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 font-medium">Structure</td>
-                                    <td class="py-2">Daily stand‑up → two 3‑hour Deep‑Work blocks → mentor / peer review
-                                        sessions</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 font-medium">Deliverables</td>
-                                    <td class="py-2">Week 1 spec ✓ / Week 2 MVP backend ✓ / Week 3 E2E test ✓ / Week 4
-                                        Launch to ≥ 10 users ✓</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 font-medium">Milestone Bond</td>
-                                    <td class="py-2">₹5 k refundable on completion (> 70 %)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 font-medium">Outcome</td>
-                                    <td class="py-2">Public Demo Day streamed on LinkedIn Live 🎥</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Daily Rhythm table -->
-                    <h3 class="text-2xl font-bold mt-20 mb-8">Daily Rhythm (Mon – Fri)</h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full text-left text-neutral-300 text-sm">
-                            <thead class="border-b border-neutral-700/60">
-                                <tr>
-                                    <th class="py-2 font-medium">Time (IST)</th>
-                                    <th class="py-2 font-medium">Activity</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-neutral-700/60">
-                                <tr>
-                                    <td class="py-2 whitespace-nowrap">08 : 30</td>
-                                    <td class="py-2">Sunrise yoga / nature walk (optional)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">09 : 30</td>
-                                    <td class="py-2">10‑min stand‑up (strict timer)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">10 : 00 – 13 : 00</td>
-                                    <td class="py-2">Deep‑Work Sprint ① – phones locked, Pomodoro every 50 min</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">13 : 00 – 14 : 00</td>
-                                    <td class="py-2">Regional home‑style lunch (veg & non‑veg)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">14 : 00 – 17 : 00</td>
-                                    <td class="py-2">Deep‑Work Sprint ②</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">17 : 00 – 18 : 30</td>
-                                    <td class="py-2">Mentor office hour / peer code & pitch reviews</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">18 : 30 – 19 : 30</td>
-                                    <td class="py-2">Dinner</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2">20 : 00 – 22 : 00</td>
-                                    <td class="py-2">Night‑Owl room open (optional)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Weekends list -->
-                    <h3 class="text-2xl font-bold mt-20 mb-8">Weekends</h3>
-                    <ul class="list-disc list-inside space-y-1 text-neutral-300 text-sm max-w-lg">
-                        <li>Saturday AM: Deliverable review & retro</li>
-                        <li>Saturday PM: Local excursion (earned)</li>
-                        <li>Sunday: Open kitchen; residents may cook, explore, or rest</li>
-                    </ul>
-
-                    <!-- Subtle CTA -->
-                    <div class="flex justify-center mt-20">
-                        <a href="#contact"
-                            class="border border-white/80 text-white font-medium py-2 px-6 rounded-lg text-base hover:bg-white hover:text-black transition">
-                            See Pricing
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ███ 2. PROGRAM SNAPSHOT  ███ -->
-            <section id="program-snapshot" class="py-24 grid-background border-t border-neutral-800/40">
-                <div class="container mx-auto max-w-5xl">
-
-                    <!-- Header -->
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight mb-16">
-                        Program <span class="text-primary">Snapshot</span>
-                    </h2>
-
-                    <!-- Top Metrics -->
-                    <div class="grid gap-14 md:grid-cols-3 text-center" id="snapshot-grid">
-                        <div class="group" data-count="30">
-                            <span class="block font-mono text-6xl lg:text-7xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-xl font-medium mt-3">Days On‑Site</h3>
-                            <p class="text-neutral-400 mt-1">Check‑in Sunday evening → Demo Day Fri Week 4.</p>
-                        </div>
-                        <div class="group" data-count="10">
-                            <span class="block font-mono text-6xl lg:text-7xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-xl font-medium mt-3">Founders / Cohort</h3>
-                            <p class="text-neutral-400 mt-1">4 private rooms · 6 shared desks.</p>
-                        </div>
-                        <div class="group" data-count="2">
-                            <span class="block font-mono text-6xl lg:text-7xl leading-none text-primary"
-                                data-counter></span>
-                            <h3 class="text-xl font-medium mt-3">Deep‑Work Sprints / Day</h3>
-                            <p class="text-neutral-400 mt-1">3h + 3h, Pomodoro‑paced.</p>
-                        </div>
-                    </div>
-
-                    <!-- Weekly Timeline -->
-                    <h3 class="text-2xl font-bold mt-24 mb-8">Weekly Milestones</h3>
-                    <div class="relative pl-4 md:pl-0 md:grid md:grid-cols-4 gap-8">
-                        <div class="border-l-2 border-primary md:border-l-0 md:border-t-2 pt-4 md:pt-0 md:pl-0">
-                            <p class="font-mono text-primary">Week 1</p>
-                            <p class="text-neutral-300">Spec locked & repo scaffolding</p>
-                        </div>
-                        <div class="border-l-2 border-primary md:border-l-0 md:border-t-2 pt-4 md:pt-0 md:pl-0">
-                            <p class="font-mono text-primary">Week 2</p>
-                            <p class="text-neutral-300">MVP backend & demo endpoint</p>
-                        </div>
-                        <div class="border-l-2 border-primary md:border-l-0 md:border-t-2 pt-4 md:pt-0 md:pl-0">
-                            <p class="font-mono text-primary">Week 3</p>
-                            <p class="text-neutral-300">End‑to‑end tests + UX polish</p>
-                        </div>
-                        <div class="border-l-2 border-primary md:border-l-0 md:border-t-2 pt-4 md:pt-0 md:pl-0">
-                            <p class="font-mono text-primary">Week 4</p>
-                            <p class="text-neutral-300">Launch ≥ 10 users · Demo Day</p>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div class="flex justify-center mt-24">
-                        <a href="#contact"
-                            class="bg-white text-black font-bold py-3 px-8 rounded-lg text-xl hover:bg-gray-200 transition">See
-                            Pricing</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4 (Program Snapshot, Daily Rhythm, Weekends and image) -->
-            <section id="program" class="flex items-center justify-center min-h-screen pt-16 grid-background">
-                <div class="container mx-auto flex flex-col md:flex-row items-center">
-                    <!-- Left Column: Tables and Lists -->
-                    <div class="md:w-1/2 mb-8 md:mb-0 text-lg">
-                        <h2 class="text-2xl font-bold mb-4">Program Snapshot</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Item</th>
-                                    <th>Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Duration</td>
-                                    <td>30 days on‑site (arrive Sunday, depart following Sunday AM)</td>
-                                </tr>
-                                <tr>
-                                    <td>Cohort Size</td>
-                                    <td>10 founders max (4 private, 6 shared)</td>
-                                </tr>
-                                <tr>
-                                    <td>Structure</td>
-                                    <td>Daily stand‑up → two 3‑hour Deep‑Work blocks → mentor / peer review sessions
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Deliverables</td>
-                                    <td>Week 1 spec ✓ / Week 2 MVP backend ✓ / Week 3 E2E test ✓ / Week 4 Launch to ≥ 10
-                                        users ✓</td>
-                                </tr>
-                                <tr>
-                                    <td>Milestone Bond</td>
-                                    <td>₹5 k refundable on completion (> 70 %)</td>
-                                </tr>
-                                <tr>
-                                    <td>Outcome</td>
-                                    <td>Public Demo Day streamed on LinkedIn Live 🎥</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <h2 class="text-2xl font-bold mb-4 mt-8">Daily Rhythm (Mon – Fri)</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Time (IST)</th>
-                                    <th>Activity</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>08 : 30</td>
-                                    <td>Sunrise yoga / nature walk (optional)</td>
-                                </tr>
-                                <tr>
-                                    <td>09 : 30</td>
-                                    <td>10‑min stand‑up (strict timer)</td>
-                                </tr>
-                                <tr>
-                                    <td>10 : 00 – 13 : 00</td>
-                                    <td>Deep‑Work Sprint ① – phones locked, Pomodoro chime every 50 min</td>
-                                </tr>
-                                <tr>
-                                    <td>13 : 00 – 14 : 00</td>
-                                    <td>Regional home‑style lunch (veg & non‑veg)</td>
-                                </tr>
-                                <tr>
-                                    <td>14 : 00 – 17 : 00</td>
-                                    <td>Deep‑Work Sprint ②</td>
-                                </tr>
-                                <tr>
-                                    <td>17 : 00 – 18 : 30</td>
-                                    <td>Mentor office hour / peer code & pitch reviews</td>
-                                </tr>
-                                <tr>
-                                    <td>18 : 30 – 19 : 30</td>
-                                    <td>Dinner</td>
-                                </tr>
-                                <tr>
-                                    <td>20 : 00 – 22 : 00</td>
-                                    <td>Night‑Owl room open (optional)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3 class="text-xl font-bold mb-4 mt-8">Weekends</h3>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li>Saturday AM: Deliverable review & retro</li>
-                            <li>Saturday PM: Local excursion (location‑specific) (earned)</li>
-                            <li>Sunday: Open kitchen; residents may cook, explore, or rest</li>
-                        </ul>
-                    </div>
-                    <!-- Right Column: Image Placeholder (e.g., Lungs) -->
-                    <div class="md:w-1/2 md:pl-12">
-                        <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
-                            <span class="text-gray-400 text-center">Image Placeholder (Themed)</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 5 (What's Included and Add-Ons) -->
-            <section id="pricing" class="pt-16 scrolling-content-background">
-                <div class="container mx-auto">
-                    <h2 class="text-2xl font-bold mb-4">What's Included</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Accommodation</td>
-                                <td>AC bedroom (shared / private) with desk & ergonomic chair</td>
-                            </tr>
-                            <tr>
-                                <td>Workspace</td>
-                                <td>Dedicated desk, fast Wi‑Fi (dual 300 Mbps fibre + 4G backup + UPS)</td>
-                            </tr>
-                            <tr>
-                                <td>Meals</td>
-                                <td>3 buffet meals/day (veg & non‑veg); unlimited chai/coffee; extra rotis on request
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Utilities</td>
-                                <td>Laundry twice/week; housekeeping alt‑day; power‑backup inverter</td>
-                            </tr>
-                            <tr>
-                                <td>Amenities</td>
-                                <td>Whiteboards, projector, garden stand‑up area, hammock corner</td>
-                            </tr>
-                            <tr>
-                                <td>Community</td>
-                                <td>Discord server, alumni channel, optional "FastBack Pass" (₹5 k for future 5‑day
-                                    stays)</td>
-                            </tr>
-                            <tr>
-                                <td>Perks</td>
-                                <td>Credits: $200 in Groq API, $500 in Replicate credits, Framer Pro 1‑mo voucher</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2 class="text-2xl font-bold mb-4 mt-8">Add‑Ons 💡</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>GPU Residency 🔋</td>
-                                <td>On‑site RTX 4090 tower: ₹12 k flat/month or ₹400/hr pay‑as‑you‑go</td>
-                            </tr>
-                            <tr>
-                                <td>Micro‑Team Sprint (5‑10 days)</td>
-                                <td>Bring your 3‑6‑person startup, ₹1.1 L package all‑in</td>
-                            </tr>
-                            <tr>
-                                <td>Investor‑in‑Residence Week</td>
-                                <td>VC partner on‑site; office hours for residents & alumni</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Section 6 (Milestone Bond & Refund Matrix and Application Process) -->
-            <section class="pt-16 scrolling-content-background">
-                <div class="container mx-auto">
-                    <h2 class="text-2xl font-bold mb-4">Milestone Bond & Refund Matrix</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Goal Completion</th>
-                                <th>Bond Return</th>
-                                <th>Tuition Rebate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>≥ 90 %</td>
-                                <td>100 %</td>
-                                <td>+10 % cash‑back</td>
-                            </tr>
-                            <tr>
-                                <td>70 – 89 %</td>
-                                <td>50 %</td>
-                                <td>—</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    < 70 %</td>
-                                <td>0 % (donated to a local STEM charity)</td>
-                                <td>—</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Section 7 (FAQs) -->
-            <section id="faqs" class="pt-16 scrolling-content-background">
-                <div class="container mx-auto">
-                    <h2 class="text-2xl font-bold mb-4">FAQs</h2>
-                    <div class="space-y-4 text-lg">
-                        <div>
-                            <h3 class="font-bold">Is this only for solo founders?</h3>
-                            <p>Primary program is solo / duo, but we run Micro‑Team Sprints; inquire for dates.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Do you take equity?</h3>
-                            <p>No. We're a pay‑and‑ship residency; your cap table stays clean.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Food preferences?</h3>
-                            <p>Veg & non‑veg counters; Jain meals available on request.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Internet reliability?</h3>
-                            <p>Dual 300 Mbps fibre lines, automatic 4G fail‑over, 4‑h UPS; uptime ≥ 99.5 %.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Can I arrive late or leave early?</h3>
-                            <p>We discourage it—cadence matters. Early departures forfeit bond.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-bold">Refund if I cancel?</h3>
-                            <p>75 % refund ≥ 30 days before start; 25 % ≥ 14 days; bond non‑refundable < 14 days.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 8 (Contact & Next Steps and Call to Action) -->
-            <section id="contact" class="pt-16 grid-background">
-                <div class="container mx-auto">
-                    <h2 class="text-2xl font-bold mb-4">Contact & Next Steps</h2>
-                    <div class="space-y-2 text-lg mb-8">
-                        <p>🌐 Website: <a href="https://deepwork-builders.github.io/ship30-residency/"
-                                class="text-blue-400 hover:underline">https://deepwork-builders.github.io/ship30-residency/</a>
-                        </p>
-                        <p>✉️ Email: <a href="mailto:apply@deepworkbuilders.com"
-                                class="text-blue-400 hover:underline">apply@deepworkbuilders.com</a></p>
-                        <p>📞 WhatsApp: +91 8097415085</p>
-                        <p>🗓️ Info Session (Zoom): Every Wednesday 20 : 00 IST – <a href="#"
-                                class="text-blue-400 hover:underline">Register Here</a></p>
-                    </div>
-
-                    <div class="text-center mt-12">
-                        <p class="text-xl mb-6">"Escape the city, focus for 30 days, and ship something real."</p>
-                        <p class="text-xl font-bold mb-6">Ready? Apply Now</p>
-                        <button
-                            class="bg-white text-black font-bold py-3 px-8 rounded-lg text-xl hover:bg-gray-200">Apply
-                            Now</button>
-                    </div>
-                </div>
-            </section>
-
         </div>
+
+        <!-- Footer -->
         <footer class="bg-black text-white w-full relative overflow-hidden min-h-[600px] md:min-h-[700px]">
-            <!-- Main footer content -->
             <div class="container mx-auto px-6 py-12 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Logo -->
-                    <div class="flex items-start">
-                        <div class="flex items-center space-x-3">
-                            <!-- CloudWalk logo - concentric circles -->
-                            <div class="relative w-12 h-8">
-                                <svg width="48" height="32" viewBox="0 0 48 32" class="text-white">
-                                    <g fill="none" stroke="currentColor" stroke-width="1">
-                                        <ellipse cx="24" cy="16" rx="6" ry="4" opacity="0.3"/>
-                                        <ellipse cx="24" cy="16" rx="9" ry="6" opacity="0.5"/>
-                                        <ellipse cx="24" cy="16" rx="12" ry="8" opacity="0.7"/>
-                                        <ellipse cx="24" cy="16" rx="15" ry="10" opacity="0.9"/>
-                                        <ellipse cx="24" cy="16" rx="18" ry="12" opacity="1"/>
-                                        <ellipse cx="24" cy="16" rx="21" ry="14" opacity="1"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <span class="text-2xl font-light tracking-wide">cloudwalk</span>
-                        </div>
-                    </div>
-    
-                    <!-- Products column -->
                     <div>
-                        <h3 class="text-lg font-medium mb-6">Products</h3>
+                        <h3 class="text-lg font-medium mb-6">The DeepWork Mission</h3>
+                        <p class="text-gray-300">
+                            DeepWork by ArkOne is not a classroom, it's an AI launchpad. We back founders, builders, and ambitious teams with the programs, tools, and real-world support to build, break, and ship AI products that actually matter.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium mb-6">Programs</h3>
                         <ul class="space-y-4">
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">InfinitePay</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">STRATUS</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">JIM</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">AI Builder Bootcamp</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Startup Acceleration</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Enterprise AI Sprints</a></li>
                         </ul>
                     </div>
-    
-                    <!-- Company column -->
+                    
                     <div>
-                        <h3 class="text-lg font-medium mb-6">Company</h3>
+                        <h3 class="text-lg font-medium mb-6">Community</h3>
                         <ul class="space-y-4">
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Newsroom</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Work with us</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Events & Meetups</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Work with Us</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">News & Stories</a></li>
                         </ul>
                     </div>
                 </div>
-    
-                <!-- Bottom section with copyright and privacy, with extra spacing above -->
+
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center pt-16">
                     <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                        © 2025 CloudWalk, Inc. Copyright
+                        © 2025 ArkOne, Inc. Copyright
                     </div>
                     <div>
                         <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
@@ -874,47 +316,196 @@
                 </div>
             </div>
             
-            <!-- Large background text with fade effect - now as last element -->
             <div class="w-full flex justify-center pointer-events-none">
                 <div class="text-gray-500 uppercase font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[11rem] leading-none tracking-[0.1em] opacity-20 select-none whitespace-nowrap residency-fade">
                     DeepWork
                 </div>
             </div>
         </footer>
-        <!-- ███ 3. COUNT‑UP SCRIPT + STYLES (shared) ███ -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const els = document.querySelectorAll('[data-counter]');
-                const fmt = v => {
-                    if (v === 30) return v + 'd';
-                    if (v === 10) return v;
-                    if (v === 6) return v + 'h';
-                    if (v === 90) return v + '%';
-                    if (v === 24) return v + '/7';
-                    if (v === 5) return 'Sat';
-                    if (v === 2) return v;
-                    return v;
+    </div>
+
+    <!-- Count-up Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const els = document.querySelectorAll('[data-counter]');
+            
+            // Time formatting function with sophisticated display
+            const formatTime = (seconds) => {
+                if (seconds < 60) {
+                    return `${seconds}s`;
+                } else if (seconds < 3600) {
+                    const minutes = Math.floor(seconds / 60);
+                    const remainingSeconds = seconds % 60;
+                    return remainingSeconds > 0 ? `${minutes}m ${remainingSeconds}s` : `${minutes}m`;
+                } else {
+                    const hours = Math.floor(seconds / 3600);
+                    const minutes = Math.floor((seconds % 3600) / 60);
+                    return minutes > 0 ? `${hours}h ${minutes}m` : `${hours}h`;
+                }
+            };
+
+            // Day formatting function for Saturday Adventures
+            const formatDay = (dayNumber) => {
+                const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                return days[dayNumber - 1] || 'Sat';
+            };
+
+            // Get the original target value for each counter
+            const getOriginalTarget = (el) => {
+                const parent = el.parentElement;
+                const count = parseInt(parent.dataset.count);
+                
+                // Convert to appropriate time values based on the original meaning
+                switch(count) {
+                    case 6: return 6 * 3600; // 6 hours
+                    case 90: return 90; // 90 seconds (for percentage effect)
+                    case 100: return 100; // 100 (for network size)
+                    case 24: return 24; // 24 (for time ratio 24/7)
+                    case 5: return 5; // 5 (for day of week - Saturday)
+                    default: return count;
+                }
+            };
+
+            // Sophisticated animation with cycling through time values
+            const animateCounter = (el, targetValue) => {
+                const originalTarget = getOriginalTarget(el);
+                const isTimeBased = [6, 24, 5, 100, 90].includes(parseInt(el.parentElement.dataset.count));
+                
+                if (!isTimeBased) {
+                    // For non-time values, use the original simple animation
+                    let current = 0;
+                    const increment = Math.max(1, originalTarget / 40);
+                    
+                    const step = () => {
+                        current += increment;
+                        if (current < originalTarget) {
+                            el.textContent = Math.floor(current);
+                            requestAnimationFrame(step);
+                        } else {
+                            el.textContent = originalTarget;
+                        }
+                    };
+                    requestAnimationFrame(step);
+                    return;
+                }
+
+                // For time-based values, create sophisticated cycling animation
+                const timeValues = [];
+                
+                // Generate time progression values
+                if (originalTarget <= 300) { // 5 minutes or less
+                    timeValues.push(1, 3, 5, 10, 15, 30, 45, 60, 90, 120, 180, 240, 300);
+                } else if (originalTarget <= 21600) { // 6 hours or less
+                    timeValues.push(60, 120, 300, 600, 900, 1800, 2700, 3600, 5400, 7200, 10800, 14400, 18000, 21600);
+                } else if (originalTarget === 100) { // Builders‑Only Network - cycle through percentage values
+                    timeValues.push(10, 25, 50, 75, 100);
+                } else if (originalTarget === 90) { // Success Threshold - cycle through percentage values
+                    timeValues.push(10, 25, 50, 75, 90);
+                } else if (originalTarget === 24) { // Direct Mentor Line - cycle through time ratios
+                    timeValues.push(1, 7, 12, 18, 24);
+                } else if (originalTarget === 5) { // Earned Saturday Adventures - cycle through days of the week
+                    timeValues.push(1, 2, 3, 4, 5); // Mon, Tue, Wed, Thu, Fri, Sat
+                } else { // 24 hours
+                    timeValues.push(3600, 7200, 10800, 14400, 18000, 21600, 43200, 64800, 86400);
+                }
+
+                // Filter to only include values up to the target
+                const filteredValues = timeValues.filter(v => v <= originalTarget);
+                
+                let currentIndex = 0;
+                let cycleCount = 0;
+                const maxCycles = 3; // Number of times to cycle through values
+                const totalDuration = 5000; // 5 seconds total
+                const stepDuration = totalDuration / (filteredValues.length * maxCycles);
+                
+                const animateStep = () => {
+                    if (cycleCount >= maxCycles) {
+                        // Final animation to target value
+                        let current = 0;
+                        const finalTarget = originalTarget;
+                        const increment = Math.max(1, finalTarget / 20);
+                        
+                        const finalStep = () => {
+                            current += increment;
+                            if (current < finalTarget) {
+                                if (originalTarget === 100) {
+                                    el.textContent = `${Math.floor(current)}%`;
+                                } else if (originalTarget === 90) {
+                                    el.textContent = `${Math.floor(current)}%`;
+                                } else if (originalTarget === 24) {
+                                    el.textContent = `${Math.floor(current)}/7`;
+                                } else if (originalTarget === 5) {
+                                    el.textContent = formatDay(Math.floor(current));
+                                } else {
+                                    el.textContent = formatTime(Math.floor(current));
+                                }
+                                requestAnimationFrame(finalStep);
+                            } else {
+                                if (originalTarget === 100) {
+                                    el.textContent = `${finalTarget}%`;
+                                } else if (originalTarget === 90) {
+                                    el.textContent = `${finalTarget}%`;
+                                } else if (originalTarget === 24) {
+                                    el.textContent = `${finalTarget}/7`;
+                                } else if (originalTarget === 5) {
+                                    el.textContent = formatDay(finalTarget);
+                                } else {
+                                    el.textContent = formatTime(finalTarget);
+                                }
+                            }
+                        };
+                        requestAnimationFrame(finalStep);
+                        return;
+                    }
+
+                    const currentValue = filteredValues[currentIndex];
+                    if (originalTarget === 100) {
+                        el.textContent = `${currentValue}%`;
+                    } else if (originalTarget === 90) {
+                        el.textContent = `${currentValue}%`;
+                    } else if (originalTarget === 24) {
+                        el.textContent = `${currentValue}/7`;
+                    } else if (originalTarget === 5) {
+                        el.textContent = formatDay(currentValue);
+                    } else {
+                        el.textContent = formatTime(currentValue);
+                    }
+                    
+                    // Add a subtle glow effect during animation
+                    el.style.textShadow = '0 0 10px rgba(245, 245, 245, 0.3)';
+                    
+                    currentIndex++;
+                    if (currentIndex >= filteredValues.length) {
+                        currentIndex = 0;
+                        cycleCount++;
+                    }
+                    
+                    setTimeout(() => {
+                        el.style.textShadow = 'none';
+                        animateStep();
+                    }, stepDuration);
                 };
-                const obs = new IntersectionObserver((entries, o) => {
-                    entries.forEach(e => {
-                        if (e.isIntersecting) {
-                            const el = e.target; const target = parseInt(el.parentElement.dataset.count);
-                            let cur = 0; const inc = Math.max(1, target / 40);
-                            const step = () => { cur += inc; if (cur < target) { el.textContent = fmt(Math.floor(cur)); requestAnimationFrame(step); } else { el.textContent = fmt(target); } };
-                            requestAnimationFrame(step); o.unobserve(el);
+
+                // Start the animation when element comes into view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateStep();
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: .3 });
-                els.forEach(el => obs.observe(el));
-            });
-        </script>
-        <style>
-            .residency-fade {
-                -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
-                mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
-            }
-        </style>
+                }, { threshold: 0.3 });
 
+                observer.observe(el);
+            };
+
+            // Initialize animations for all counters
+            els.forEach(el => {
+                const targetValue = getOriginalTarget(el);
+                animateCounter(el, targetValue);
+            });
+        });
+    </script>
 </body>
 
 </html>
