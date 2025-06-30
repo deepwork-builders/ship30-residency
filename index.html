@@ -75,8 +75,8 @@
 
         /* Background patterns */
         .grid-background {
-            background-image: linear-gradient(to right, #333 1px, transparent 1px), 
-                              linear-gradient(to bottom, #333 1px, #141414 1px);
+            background-image: linear-gradient(to right, #333 1px, transparent 1px),
+                linear-gradient(to bottom, #333 1px, #141414 1px);
             background-size: 50px 50px;
         }
 
@@ -94,7 +94,8 @@
             color: #ffffff;
         }
 
-        th, td {
+        th,
+        td {
             padding: 0.75rem;
             text-align: left;
             border-bottom: 1px solid #333;
@@ -144,6 +145,7 @@
         }
 
         @media(prefers-reduced-motion: reduce) {
+
             #benefit-grid .group:hover,
             #snapshot-grid .group:hover {
                 transform: none;
@@ -154,6 +156,54 @@
         .residency-fade {
             -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
             mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+        }
+
+        .faq-answer.faq-open {
+            max-height: 200px !important;
+        }
+
+        /* Partner Logo Slider Styles */
+        .partner-slider-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .partner-slider {
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .partner-logo {
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Pause animation on hover */
+        .partner-slider-container:hover .partner-slider {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .partner-slider {
+                animation-duration: 20s;
+            }
+
+            .partner-logo {
+                margin-right: 2rem;
+            }
         }
     </style>
 </head>
@@ -196,10 +246,9 @@
                     <!-- Hero image placeholder -->
                 </div>
             </div>
-            <img class="residency_hero-image" 
-                 src="images/residency_hero-head.webp"
-                 alt="Themed anatomical and mechanical head"
-                 style="position: absolute; margin: auto; bottom: 0px; right: 0px; left: 0px; max-height: 75vh; width: auto;">
+            <img class="residency_hero-image" src="images/residency_hero-head.webp"
+                alt="Themed anatomical and mechanical head"
+                style="position: absolute; margin: auto; bottom: 0px; right: 0px; left: 0px; max-height: 75vh; width: auto;">
         </section>
 
         <!-- Wrapper for scrollable content -->
@@ -209,10 +258,8 @@
                 <div class="container mx-auto flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-8 md:mb-0 hidden md:block">
                         <div class="bg-gray-700 w-full h-96 flex items-center justify-center">
-                            <img class="residency_hero-image" 
-                                 src="images/heart-cyber.webp"
-                                 alt="Themed anatomical and mechanical head" 
-                                 style="max-height: 75vh; width: auto;">
+                            <img class="residency_hero-image" src="images/heart-cyber.webp"
+                                alt="Themed anatomical and mechanical head" style="max-height: 75vh; width: auto;">
                         </div>
                     </div>
                     <div class="md:w-1/2 md:pl-12 text-lg">
@@ -234,6 +281,8 @@
                 </div>
             </section>
 
+
+
             <!-- Why Join Section -->
             <section id="why-join" class="py-24 scrolling-content-background">
                 <div class="container mx-auto max-w-6xl md:grid md:grid-cols-2 md:gap-24">
@@ -246,34 +295,276 @@
                     <div class="flex items-center">
                         <div class="grid gap-12 sm:grid-cols-2" id="benefit-grid">
                             <div class="group" data-count="6">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
+                                    data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Hours of Deep Work</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Phones locked away, context‑switches banned, solid focus blocks that compound daily.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Phones locked away, context‑switches banned,
+                                    solid focus blocks that compound daily.</p>
                             </div>
                             <div class="group" data-count="90">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
+                                    data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Success Threshold</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Hit ≥ 90% of your milestone and get your bond back + 10% rebate.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Hit ≥ 90% of your milestone and get your bond
+                                    back + 10% rebate.</p>
                             </div>
                             <div class="group" data-count="100">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
+                                    data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Builders‑Only Network</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">100% peers shipping GenAI, LLM & ML products zero off‑topic chatter.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">100% peers shipping GenAI, LLM & ML products
+                                    zero off‑topic chatter.</p>
                             </div>
                             <div class="group" data-count="24">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
+                                    data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Direct Mentor Line</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">24/7 Slack + live Q&As with exited AI founders and active investors.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">24/7 Slack + live Q&As with exited AI founders
+                                    and active investors.</p>
                             </div>
                             <div class="group sm:col-span-2" data-count="5">
-                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary" data-counter></span>
+                                <span class="block font-mono text-4xl lg:text-5xl leading-none text-primary"
+                                    data-counter></span>
                                 <h3 class="text-base font-medium mt-2">Earned Saturday Adventures</h3>
-                                <p class="text-neutral-400 mt-1 text-sm">Meet weekly KPIs → kayak backwaters, trek hidden beaches or chase local waterfalls.</p>
+                                <p class="text-neutral-400 mt-1 text-sm">Meet weekly KPIs → kayak backwaters, trek
+                                    hidden beaches or chase local waterfalls.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- ░░▒▓ BUILDER LAB ESSENTIALS ▓▒░░ -->
+            <section id="builder-essentials" class="py-24 grid-background">
+                <div class="container mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-16 items-center">
+
+                    <!-- ▸ Text -->
+                    <div class="space-y-12">
+
+                        <!-- Hook -->
+                        <p class="text-neutral-300 text-lg md:text-xl leading-relaxed max-w-xl">
+                            One month. Zero noise. Private rooms, on-demand GPUs, chef meals, and a cohort that ships
+                            together. You build, everything else is handled.
+                        </p>
+
+                        <!-- Info strips -->
+                        <div class="space-y-6">
+
+                            <div class="border-l-4 border-white pl-5">
+                                <h3 class="font-semibold text-white text-lg md:text-xl">Fee (Stay & Meals)</h3>
+                                <p class="text-neutral-300 text-base md:text-lg">
+                                    ₹32 k covers room, food, workspace, and local ops for a month. Program is
+                                    <b>free</b>.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-white pl-5">
+                                <h3 class="font-semibold text-white text-lg md:text-xl">No Equity</h3>
+                                <p class="text-neutral-300 text-base md:text-lg">
+                                    We take <b>0 %</b> of your cap table. Your product, your upside.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-white pl-5">
+                                <h3 class="font-semibold text-white text-lg md:text-xl">Credits & Perks</h3>
+                                <p class="text-neutral-300 text-base md:text-lg">
+                                    $700+ in AI tooling credits (Groq, Replicate, Framer) plus lifetime Slack and
+                                    demo-day invites.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-white pl-5">
+                                <h3 class="font-semibold text-white text-lg md:text-xl">Timeline</h3>
+                                <p class="text-neutral-300 text-base md:text-lg">
+                                    Apply by <b>Aug 02</b>. Residency runs <b>Sep 01 – 30</b>.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA -->
+                        <a href="docs/Ship30_AI_Residency_Playbook.pdf" target="_blank"
+                            class="inline-flex items-center gap-2 bg-white text-black font-bold py-2 px-4 rounded-md text-sm md:text-base hover:bg-gray-200 transition w-max">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                            Download Playbook
+                        </a>
+                    </div>
+
+                    <!-- ▸ Image -->
+                    <div>
+                        <img src="images/hands.webp" alt="Mechanical hand render"
+                            class="rounded-xl shadow-lg object-contain w-full h-auto md:max-h-[520px]">
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="py-24 grid-background">
+                <div class="container mx-auto max-w-5xl px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <!-- Image Side -->
+                        <div class="flex justify-center items-center">
+                            <img src="images/eye.webp" alt="Themed anatomical and mechanical heart"
+                                class="rounded-xl shadow-lg max-h-96 w-auto">
+                        </div>
+                        <!-- FAQ Side -->
+                        <div class="space-y-8">
+                            <div class="faq-item pb-2">
+                                <button
+                                    class="faq-question w-full text-left font-bold text-white text-lg md:text-xl tracking-wide uppercase focus:outline-none flex justify-between items-center">
+                                    SOLO FOUNDERS ONLY?
+                                    <span class="faq-arrow">+</span>
+                                </button>
+                                <div
+                                    class="faq-answer text-gray-300 mt-2 overflow-hidden transition-all duration-400 max-h-0">
+                                    Primarily designed for solos/duos building AI products.
+                                </div>
+                            </div>
+                            <div class="faq-item pb-2">
+                                <button
+                                    class="faq-question w-full text-left font-bold text-white text-lg md:text-xl tracking-wide uppercase focus:outline-none flex justify-between items-center">
+                                    DO YOU TAKE EQUITY?
+                                    <span class="faq-arrow">+</span>
+                                </button>
+                                <div
+                                    class="faq-answer text-gray-300 mt-2 overflow-hidden transition-all duration-400 max-h-0">
+                                    Never. Your cap table remains untouched.
+                                </div>
+                            </div>
+                            <div class="faq-item pb-2">
+                                <button
+                                    class="faq-question w-full text-left font-bold text-white text-lg md:text-xl tracking-wide uppercase focus:outline-none flex justify-between items-center">
+                                    INTERNET RELIABILITY?
+                                    <span class="faq-arrow">+</span>
+                                </button>
+                                <div
+                                    class="faq-answer text-gray-300 mt-2 overflow-hidden transition-all duration-400 max-h-0">
+                                    Triple-redundant systems with UPS backup (99.5% uptime).
+                                </div>
+                            </div>
+                            <div class="faq-item pb-2">
+                                <button
+                                    class="faq-question w-full text-left font-bold text-white text-lg md:text-xl tracking-wide uppercase focus:outline-none flex justify-between items-center">
+                                    DIETARY ACCOMMODATIONS?
+                                    <span class="faq-arrow">+</span>
+                                </button>
+                                <div
+                                    class="faq-answer text-gray-300 mt-2 overflow-hidden transition-all duration-400 max-h-0">
+                                    Veg/non-veg daily + Jain options available.
+                                </div>
+                            </div>
+                            <div class="faq-item pb-2">
+                                <button
+                                    class="faq-question w-full text-left font-bold text-white text-lg md:text-xl tracking-wide uppercase focus:outline-none flex justify-between items-center">
+                                    CAN I ARRIVE LATE?
+                                    <span class="faq-arrow">+</span>
+                                </button>
+                                <div
+                                    class="faq-answer text-gray-300 mt-2 overflow-hidden transition-all duration-400 max-h-0">
+                                    We discourage interruptions - full commitment maximizes results.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Join the Builder Tribe CTA Section -->
+            <section class="py-24 scrolling-content-background">
+                <div class="container mx-auto max-w-4xl text-center px-4">
+                    <div class="bg-black from-gray-800 to-gray-900 rounded-2xl p-12 border border-gray-700">
+                        <h2 class="text-4xl md:text-6xl font-thin mb-6 uppercase tracking-wide">
+                            Join the<br><span class="font-bold">Builder Tribe</span>
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                            Ready to ship your AI product in 30 days? Join a cohort of builders who don't just talk about building—they actually ship.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="#contact" class="w-full sm:w-auto">
+                                <button class="bg-white text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                                    Apply for September Cohort
+                                </button>
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto">
+                                <button class="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto">
+                                    Book Info Session
+                                </button>
+                            </a>
+                        </div>
+                        <div class="mt-8 text-sm text-gray-400">
+                            <p>Applications close August 2nd • Only 12 spots available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Partner Logo Slider Section -->
+        <section class="py-8 bg-black border-t border-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-8">
+                    <h3 class="text-xl font-bold text-white mb-2">Trusted by AI Builders</h3>
+                    <p class="text-gray-400 text-base">Join the community of founders who've shipped with us</p>
+                </div>
+
+                <div class="partner-slider-container overflow-hidden">
+                    <div class="partner-slider flex items-center space-x-16 animate-scroll">
+                        <!-- Partner logos -->
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client1.svg" alt="AI Startup 1"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client2.svg" alt="Tech Corp"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client3.svg" alt="Innovate Labs"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client4.svg" alt="Future AI"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client5.svg" alt="Build Co"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client6.svg" alt="Ship Fast"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <!-- Duplicate logos for seamless loop -->
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client1.svg" alt="AI Startup 1"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client2.svg" alt="Tech Corp"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client3.svg" alt="Innovate Labs"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client4.svg" alt="Future AI"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client5.svg" alt="Build Co"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                        <div class="partner-logo flex-shrink-0">
+                            <img src="images/clients/client6.svg" alt="Ship Fast"
+                                class="w-32 h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         </div>
 
         <!-- Footer -->
@@ -283,25 +574,33 @@
                     <div>
                         <h3 class="text-lg font-medium mb-6">The DeepWork Mission</h3>
                         <p class="text-gray-300">
-                            DeepWork by ArkOne is not a classroom, it's an AI launchpad. We back founders, builders, and ambitious teams with the programs, tools, and real-world support to build, break, and ship AI products that actually matter.
+                            DeepWork by ArkOne is not a classroom, it's an AI launchpad. We back founders, builders, and
+                            ambitious teams with the programs, tools, and real-world support to build, break, and ship
+                            AI products that actually matter.
                         </p>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-lg font-medium mb-6">Programs</h3>
                         <ul class="space-y-4">
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">AI Builder Bootcamp</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Startup Acceleration</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Enterprise AI Sprints</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">AI Builder
+                                    Bootcamp</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Startup
+                                    Acceleration</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Enterprise AI
+                                    Sprints</a></li>
                         </ul>
                     </div>
-                    
+
                     <div>
                         <h3 class="text-lg font-medium mb-6">Community</h3>
                         <ul class="space-y-4">
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Events & Meetups</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Work with Us</a></li>
-                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">News & Stories</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Events &
+                                    Meetups</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Work with Us</a>
+                            </li>
+                            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">News & Stories</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -315,9 +614,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="w-full flex justify-center pointer-events-none">
-                <div class="text-gray-500 uppercase font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[11rem] leading-none tracking-[0.1em] opacity-20 select-none whitespace-nowrap residency-fade">
+                <div
+                    class="text-gray-500 uppercase font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[11rem] leading-none tracking-[0.1em] opacity-20 select-none whitespace-nowrap residency-fade">
                     DeepWork
                 </div>
             </div>
@@ -328,7 +628,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const els = document.querySelectorAll('[data-counter]');
-            
+
             // Time formatting function with sophisticated display
             const formatTime = (seconds) => {
                 if (seconds < 60) {
@@ -354,9 +654,9 @@
             const getOriginalTarget = (el) => {
                 const parent = el.parentElement;
                 const count = parseInt(parent.dataset.count);
-                
+
                 // Convert to appropriate time values based on the original meaning
-                switch(count) {
+                switch (count) {
                     case 6: return 6 * 3600; // 6 hours
                     case 90: return 90; // 90 seconds (for percentage effect)
                     case 100: return 100; // 100 (for network size)
@@ -370,12 +670,12 @@
             const animateCounter = (el, targetValue) => {
                 const originalTarget = getOriginalTarget(el);
                 const isTimeBased = [6, 24, 5, 100, 90].includes(parseInt(el.parentElement.dataset.count));
-                
+
                 if (!isTimeBased) {
                     // For non-time values, use the original simple animation
                     let current = 0;
                     const increment = Math.max(1, originalTarget / 40);
-                    
+
                     const step = () => {
                         current += increment;
                         if (current < originalTarget) {
@@ -391,7 +691,7 @@
 
                 // For time-based values, create sophisticated cycling animation
                 const timeValues = [];
-                
+
                 // Generate time progression values
                 if (originalTarget <= 300) { // 5 minutes or less
                     timeValues.push(1, 3, 5, 10, 15, 30, 45, 60, 90, 120, 180, 240, 300);
@@ -411,20 +711,20 @@
 
                 // Filter to only include values up to the target
                 const filteredValues = timeValues.filter(v => v <= originalTarget);
-                
+
                 let currentIndex = 0;
                 let cycleCount = 0;
                 const maxCycles = 3; // Number of times to cycle through values
                 const totalDuration = 5000; // 5 seconds total
                 const stepDuration = totalDuration / (filteredValues.length * maxCycles);
-                
+
                 const animateStep = () => {
                     if (cycleCount >= maxCycles) {
                         // Final animation to target value
                         let current = 0;
                         const finalTarget = originalTarget;
                         const increment = Math.max(1, finalTarget / 20);
-                        
+
                         const finalStep = () => {
                             current += increment;
                             if (current < finalTarget) {
@@ -470,16 +770,16 @@
                     } else {
                         el.textContent = formatTime(currentValue);
                     }
-                    
+
                     // Add a subtle glow effect during animation
                     el.style.textShadow = '0 0 10px rgba(245, 245, 245, 0.3)';
-                    
+
                     currentIndex++;
                     if (currentIndex >= filteredValues.length) {
                         currentIndex = 0;
                         cycleCount++;
                     }
-                    
+
                     setTimeout(() => {
                         el.style.textShadow = 'none';
                         animateStep();
@@ -503,6 +803,35 @@
             els.forEach(el => {
                 const targetValue = getOriginalTarget(el);
                 animateCounter(el, targetValue);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.faq-question').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var answer = btn.parentElement.querySelector('.faq-answer');
+                    var arrow = btn.querySelector('.faq-arrow');
+                    var isOpen = answer.classList.contains('faq-open');
+                    // Close all
+                    document.querySelectorAll('.faq-answer').forEach(function (el) {
+                        el.classList.remove('faq-open');
+                        el.style.maxHeight = '0px';
+                    });
+                    document.querySelectorAll('.faq-arrow').forEach(function (el) { el.textContent = '+'; });
+                    // Open this one if it was closed
+                    if (!isOpen) {
+                        answer.classList.add('faq-open');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        arrow.textContent = '–';
+                    }
+                });
+            });
+            // On window resize, update open answer maxHeight
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.faq-answer.faq-open').forEach(function (el) {
+                    el.style.maxHeight = el.scrollHeight + 'px';
+                });
             });
         });
     </script>
